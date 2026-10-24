@@ -635,7 +635,9 @@ ambigüedad.
 \section*{5. Consideraciones de entrega}
 
 La gramática para JFLAP se encuentra en GitHub mediante el
-\href{https://github.com/FernandoValdes01/teoria-computacion/blob/main/laboratorios/lab3/lab03fixon/gramatica/GLC_Lab03.cfg}{enlace directo a \texttt{GLC\_Lab03.cfg}}.
+\href{https://github.com/FernandoValdes01/Lab03-TC/blob/main/gramatica/GLC_Lab03.cfg}{enlace directo a \texttt{GLC\_Lab03.cfg}}.
+También se adjunta una
+\href{https://github.com/FernandoValdes01/Lab03-TC/blob/main/gramatica/GLC_Lab03.jff}{copia idéntica con extensión \texttt{.jff}}.
 El archivo usa la codificación de un carácter por símbolo descrita en el anexo D.
 
 La carpeta de entrega contiene el informe y los siguientes archivos:
@@ -644,6 +646,7 @@ La carpeta de entrega contiene el informe y los siguientes archivos:
   \item \texttt{Lab03\_Juan\_Munoz\_Veloso.pdf}: informe del laboratorio.
   \item \texttt{gramatica/\allowbreak GLC\_Lab03.cfg}: gramática en el formato XML de JFLAP 7.1, con
   la codificación isomorfa de un carácter por símbolo (14 variables, 19 terminales, 27 producciones).
+  \item \texttt{gramatica/\allowbreak GLC\_Lab03.jff}: copia idéntica del archivo anterior para abrir en JFLAP.
   \item \texttt{gramatica/\allowbreak GLC\_Lab03.txt}: definición formal legible de $G=(V,\Sigma,P,S)$
   y tabla de codificación para JFLAP.
   \item \texttt{herramientas/\allowbreak gramatica\_lab3.py}: especificación de la gramática (fuente única de
@@ -656,6 +659,11 @@ La carpeta de entrega contiene el informe y los siguientes archivos:
   la biblioteca de JFLAP 7.1.
   \item \texttt{herramientas/\allowbreak CapturarArbolJFLAP.\allowbreak java}: harness que reproduce las capturas de los
   árboles con JFLAP 7.1.
+  \item \texttt{herramientas/\allowbreak test\_validar\_gramatica.py}: pruebas de regresión del analizador y de la correspondencia con el XML.
+  \item \texttt{herramientas/\allowbreak VerificarCasosJFLAP.java},
+  \texttt{gramatica/\allowbreak casos\_jflap.tsv} y
+  \texttt{evidencias/\allowbreak validacion\_casos\_jflap.txt}: verificación de 14 casos con la biblioteca de JFLAP.
+  \item \texttt{gramatica/\allowbreak equivalencias\_jflap.txt}: correspondencia entre los símbolos y su codificación.
   \item \texttt{figuras/}: árboles sintácticos en PDF vectorial, con originales SVG y copias PNG, y
   capturas de JFLAP 7.1 en \texttt{jflap\_*.png}.
   \item \texttt{evidencias/\allowbreak evidencias\_lab03.txt} y \texttt{evidencias/\allowbreak verificacion\_jflap.txt}:

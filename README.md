@@ -62,7 +62,7 @@ con 27 producciones. `S` corresponde a `<programa>`. Los códigos `i` y `n`
 representan clases léxicas; no almacenan los nombres o valores concretos.
 
 Para un programa completo se usa `S` como inicio. Para analizar una instrucción
-suelta se selecciona `I`; para el cuerpo de un lazo, `M`. Ejemplos:
+suelta se selecciona `I`; para una instrucción de lazo completa, `M`. Ejemplos:
 
 | Instrucción | Entrada codificada | Inicio |
 |---|---|---|
