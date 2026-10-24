@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<svg xmlns='http://www.w3.org/2000/svg' width='1357' height='526' viewBox='0 0 1357 526' font-family='DejaVu Sans, sans-serif'>
+<rect width='100%' height='100%' fill='#ffffff'/>
+<text x='678' y='24' text-anchor='middle' font-size='16' font-weight='bold' fill='#1f3864'>mientras x &lt; 10 x = x + 1 # fin_mientras</text>
+<line x1='671.5' y1='60.0' x2='671.5' y2='114.0' stroke='#5b6b7c' stroke-width='1.2'/>
+<line x1='671.5' y1='114.0' x2='66.6' y2='168.0' stroke='#5b6b7c' stroke-width='1.2'/>
+<line x1='671.5' y1='114.0' x2='318.6' y2='168.0' stroke='#5b6b7c' stroke-width='1.2'/>
+<line x1='318.6' y1='168.0' x2='163.9' y2='222.0' stroke='#5b6b7c' stroke-width='1.2'/>
+<line x1='163.9' y1='222.0' x2='163.9' y2='276.0' stroke='#5b6b7c' stroke-width='1.2'/>
+<line x1='318.6' y1='168.0' x2='301.9' y2='222.0' stroke='#5b6b7c' stroke-width='1.2'/>
+<line x1='301.9' y1='222.0' x2='301.9' y2='276.0' stroke='#5b6b7c' stroke-width='1.2'/>
+<line x1='318.6' y1='168.0' x2='473.2' y2='222.0' stroke='#5b6b7c' stroke-width='1.2'/>
+<line x1='473.2' y1='222.0' x2='473.2' y2='276.0' stroke='#5b6b7c' stroke-width='1.2'/>
+<line x1='671.5' y1='114.0' x2='885.9' y2='168.0' stroke='#5b6b7c' stroke-width='1.2'/>
+<line x1='885.9' y1='168.0' x2='885.9' y2='222.0' stroke='#5b6b7c' stroke-width='1.2'/>
+<line x1='885.9' y1='222.0' x2='885.9' y2='276.0' stroke='#5b6b7c' stroke-width='1.2'/>
+<line x1='885.9' y1='276.0' x2='885.9' y2='330.0' stroke='#5b6b7c' stroke-width='1.2'/>
+<line x1='885.9' y1='330.0' x2='607.5' y2='384.0' stroke='#5b6b7c' stroke-width='1.2'/>
+<line x1='885.9' y1='330.0' x2='678.9' y2='384.0' stroke='#5b6b7c' stroke-width='1.2'/>
+<line x1='885.9' y1='330.0' x2='888.3' y2='384.0' stroke='#5b6b7c' stroke-width='1.2'/>
+<line x1='888.3' y1='384.0' x2='750.3' y2='438.0' stroke='#5b6b7c' stroke-width='1.2'/>
+<line x1='750.3' y1='438.0' x2='750.3' y2='492.0' stroke='#5b6b7c' stroke-width='1.2'/>
+<line x1='888.3' y1='384.0' x2='888.3' y2='438.0' stroke='#5b6b7c' stroke-width='1.2'/>
+<line x1='888.3' y1='438.0' x2='888.3' y2='492.0' stroke='#5b6b7c' stroke-width='1.2'/>
+<line x1='888.3' y1='384.0' x2='1026.3' y2='438.0' stroke='#5b6b7c' stroke-width='1.2'/>
+<line x1='1026.3' y1='438.0' x2='1026.3' y2='492.0' stroke='#5b6b7c' stroke-width='1.2'/>
+<line x1='885.9' y1='330.0' x2='1164.3' y2='384.0' stroke='#5b6b7c' stroke-width='1.2'/>
+<line x1='671.5' y1='114.0' x2='1276.4' y2='168.0' stroke='#5b6b7c' stroke-width='1.2'/>
+<ellipse cx='671.5' cy='60.0' rx='59.1' ry='15' fill='#dceaf7' stroke='#2b5f9e' stroke-width='1.4'/>
+<text x='671.5' y='64.0' text-anchor='middle' font-size='13' fill='#1f3864'>&lt;instruccion&gt;</text>
+<ellipse cx='671.5' cy='114.0' rx='70.2' ry='15' fill='#dceaf7' stroke='#2b5f9e' stroke-width='1.4'/>
+<text x='671.5' y='118.0' text-anchor='middle' font-size='13' fill='#1f3864'>&lt;mientras_instr&gt;</text>
+<ellipse cx='66.6' cy='168.0' rx='40.6' ry='15' fill='#f3f5f6' stroke='#7b8794' stroke-width='1.2'/>
+<text x='66.6' y='172.0' text-anchor='middle' font-size='13' fill='#24303f'>mientras</text>
+<ellipse cx='318.6' cy='168.0' rx='51.7' ry='15' fill='#dceaf7' stroke='#2b5f9e' stroke-width='1.4'/>
+<text x='318.6' y='172.0' text-anchor='middle' font-size='13' fill='#1f3864'>&lt;condicion&gt;</text>
+<ellipse cx='163.9' cy='222.0' rx='48.0' ry='15' fill='#dceaf7' stroke='#2b5f9e' stroke-width='1.4'/>
+<text x='163.9' y='226.0' text-anchor='middle' font-size='13' fill='#1f3864'>&lt;operando&gt;</text>
+<ellipse cx='163.9' cy='276.0' rx='14.7' ry='15' fill='#f3f5f6' stroke='#7b8794' stroke-width='1.2'/>
+<text x='163.9' y='280.0' text-anchor='middle' font-size='13' fill='#24303f'>x</text>
+<ellipse cx='301.9' cy='222.0' rx='62.8' ry='15' fill='#dceaf7' stroke='#2b5f9e' stroke-width='1.4'/>
+<text x='301.9' y='226.0' text-anchor='middle' font-size='13' fill='#1f3864'>&lt;operador_rel&gt;</text>
+<ellipse cx='301.9' cy='276.0' rx='14.7' ry='15' fill='#f3f5f6' stroke='#7b8794' stroke-width='1.2'/>
+<text x='301.9' y='280.0' text-anchor='middle' font-size='13' fill='#24303f'>&lt;</text>
+<ellipse cx='473.2' cy='222.0' rx='48.0' ry='15' fill='#dceaf7' stroke='#2b5f9e' stroke-width='1.4'/>
+<text x='473.2' y='226.0' text-anchor='middle' font-size='13' fill='#1f3864'>&lt;operando&gt;</text>
+<ellipse cx='473.2' cy='276.0' rx='18.4' ry='15' fill='#f3f5f6' stroke='#7b8794' stroke-width='1.2'/>
+<text x='473.2' y='280.0' text-anchor='middle' font-size='13' fill='#24303f'>10</text>
+<ellipse cx='885.9' cy='168.0' rx='88.7' ry='15' fill='#dceaf7' stroke='#2b5f9e' stroke-width='1.4'/>
+<text x='885.9' y='172.0' text-anchor='middle' font-size='13' fill='#1f3864'>&lt;lista_instrucciones&gt;</text>
+<ellipse cx='885.9' cy='222.0' rx='59.1' ry='15' fill='#dceaf7' stroke='#2b5f9e' stroke-width='1.4'/>
+<text x='885.9' y='226.0' text-anchor='middle' font-size='13' fill='#1f3864'>&lt;instruccion&gt;</text>
+<ellipse cx='885.9' cy='276.0' rx='55.4' ry='15' fill='#dceaf7' stroke='#2b5f9e' stroke-width='1.4'/>
+<text x='885.9' y='280.0' text-anchor='middle' font-size='13' fill='#1f3864'>&lt;asignacion&gt;</text>
+<ellipse cx='885.9' cy='330.0' rx='92.4' ry='15' fill='#dceaf7' stroke='#2b5f9e' stroke-width='1.4'/>
+<text x='885.9' y='334.0' text-anchor='middle' font-size='13' fill='#1f3864'>&lt;asignacion_expresion&gt;</text>
+<ellipse cx='607.5' cy='384.0' rx='14.7' ry='15' fill='#f3f5f6' stroke='#7b8794' stroke-width='1.2'/>
+<text x='607.5' y='388.0' text-anchor='middle' font-size='13' fill='#24303f'>x</text>
+<ellipse cx='678.9' cy='384.0' rx='14.7' ry='15' fill='#f3f5f6' stroke='#7b8794' stroke-width='1.2'/>
+<text x='678.9' y='388.0' text-anchor='middle' font-size='13' fill='#24303f'>=</text>
+<ellipse cx='888.3' cy='384.0' rx='51.7' ry='15' fill='#dceaf7' stroke='#2b5f9e' stroke-width='1.4'/>
+<text x='888.3' y='388.0' text-anchor='middle' font-size='13' fill='#1f3864'>&lt;expresion&gt;</text>
+<ellipse cx='750.3' cy='438.0' rx='48.0' ry='15' fill='#dceaf7' stroke='#2b5f9e' stroke-width='1.4'/>
+<text x='750.3' y='442.0' text-anchor='middle' font-size='13' fill='#1f3864'>&lt;operando&gt;</text>
+<ellipse cx='750.3' cy='492.0' rx='14.7' ry='15' fill='#f3f5f6' stroke='#7b8794' stroke-width='1.2'/>
+<text x='750.3' y='496.0' text-anchor='middle' font-size='13' fill='#24303f'>x</text>
+<ellipse cx='888.3' cy='438.0' rx='48.0' ry='15' fill='#dceaf7' stroke='#2b5f9e' stroke-width='1.4'/>
+<text x='888.3' y='442.0' text-anchor='middle' font-size='13' fill='#1f3864'>&lt;operador&gt;</text>
+<ellipse cx='888.3' cy='492.0' rx='14.7' ry='15' fill='#f3f5f6' stroke='#7b8794' stroke-width='1.2'/>
+<text x='888.3' y='496.0' text-anchor='middle' font-size='13' fill='#24303f'>+</text>
+<ellipse cx='1026.3' cy='438.0' rx='48.0' ry='15' fill='#dceaf7' stroke='#2b5f9e' stroke-width='1.4'/>
+<text x='1026.3' y='442.0' text-anchor='middle' font-size='13' fill='#1f3864'>&lt;operando&gt;</text>
+<ellipse cx='1026.3' cy='492.0' rx='14.7' ry='15' fill='#f3f5f6' stroke='#7b8794' stroke-width='1.2'/>
+<text x='1026.3' y='496.0' text-anchor='middle' font-size='13' fill='#24303f'>1</text>
+<ellipse cx='1164.3' cy='384.0' rx='14.7' ry='15' fill='#f3f5f6' stroke='#7b8794' stroke-width='1.2'/>
+<text x='1164.3' y='388.0' text-anchor='middle' font-size='13' fill='#24303f'>#</text>
+<ellipse cx='1276.4' cy='168.0' rx='55.4' ry='15' fill='#f3f5f6' stroke='#7b8794' stroke-width='1.2'/>
+<text x='1276.4' y='172.0' text-anchor='middle' font-size='13' fill='#24303f'>fin_mientras</text>
+</svg>

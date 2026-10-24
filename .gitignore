@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+
+# Java y compilaciones locales
+*.class
+*.jar
+build/
+
+# Auxiliares LaTeX; conservar PDF y fuentes del informe
+*.aux
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.xdv
+
+# Editor y sistema
+.vscode/
+.idea/
+.DS_Store
+*~

@@ -1,0 +1,40 @@
+Archivo        : gramatica/GLC_Lab03.cfg
+Java           : 26.0.2
+Tipo de objeto : grammar.UnboundGrammar
+Simbolo inicial: S
+No terminales  : 14
+Terminales     : 19
+Producciones   : 27
+
+Producciones leidas por JFLAP:
+  S -> bpiLe
+  L -> I
+  L -> IL
+  I -> A
+  I -> Q
+  I -> M
+  A -> B
+  A -> E
+  B -> i=V#
+  E -> i=X#
+  V -> n
+  V -> i
+  X -> ORO
+  O -> i
+  O -> n
+  R -> +
+  R -> -
+  R -> *
+  R -> /
+  R -> %
+  Q -> si#
+  M -> mCLf
+  C -> OTO
+  T -> <
+  T -> >
+  T -> l
+  T -> g
+
+RESULTADO: el archivo fue aceptado por JFLAP 7.1 y cumple
+           14 variables, 19 terminales, 27 producciones,
+           simbolo inicial S y simbolos de un caracter.

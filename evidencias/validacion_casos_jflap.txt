@@ -1,0 +1,57 @@
+Archivo        : GLC_Lab03.cfg
+Biblioteca     : JFLAP7.1-fixed.jar
+SHA-256 JAR    : b4af90940987d7250f18aec1964cdef20644994fba8fb640d6f1217af1cc9079
+Java           : 26.0.2
+Simbolo inicial: S = <programa>
+No terminales  : 14
+Terminales     : 19
+Producciones   : 27
+
+Producciones leidas por JFLAP (ver equivalencias_jflap.txt):
+  S -> bpiLe
+  L -> I
+  L -> IL
+  I -> A
+  I -> Q
+  I -> M
+  A -> B
+  A -> E
+  B -> i=V#
+  E -> i=X#
+  V -> n
+  V -> i
+  X -> ORO
+  O -> i
+  O -> n
+  R -> +
+  R -> -
+  R -> *
+  R -> /
+  R -> %
+  Q -> si#
+  M -> mCLf
+  C -> OTO
+  T -> <
+  T -> >
+  T -> l
+  T -> g
+
+Validacion con UnitProductionRemover, CNFConverter y CYKParser de JFLAP:
+  P4-1                 inicio=I  ACEPTADA   i=n#
+  P4-2                 inicio=I  ACEPTADA   i=i+i#
+  P4-3                 inicio=I  ACEPTADA   si#
+  P4-4                 inicio=I  RECHAZADA  in#
+  P4-5                 inicio=I  RECHAZADA  i=+i#
+  P4-6                 inicio=I  RECHAZADA  s#
+  P4-7                 inicio=I  RECHAZADA  i=n
+  P4-8                 inicio=S  ACEPTADA   bpii=n#si#e
+  P3-1                 inicio=I  ACEPTADA   i=n#
+  P3-2                 inicio=I  ACEPTADA   i=i*i#
+  P3-3                 inicio=I  ACEPTADA   si#
+  extension-valida     inicio=S  ACEPTADA   bpimi<ni=i+n#fsi#e
+  extension-invalida   inicio=S  RECHAZADA  bpimi<ni=i+n#si#e
+  referencia           inicio=S  ACEPTADA   bpii=n#i=n#i=i+i#i=i+i#i=i-i#i=i-i#i=i*i#i=i/i#i=i%n#si#si#si#si#si#i=n#i=i#i=i#i=i#si#si#e
+
+Captura        : captura_jflap.png
+Origen captura : componente GrammarTable de JFLAP, renderizado sin escritorio.
+RESULTADO: 14 casos correctos; inicio y alfabetos verificados.

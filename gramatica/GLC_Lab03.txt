@@ -1,0 +1,133 @@
+GRAMATICA LIBRE DE CONTEXTO DEL LENGUAJE DE PROGRAMACION SIMPLIFICADO
+Laboratorio 3 - Diseno y Validacion de Gramaticas
+==============================================================================
+
+G = (V, Sigma, P, S)
+
+SIMBOLO INICIAL
+  S = <programa>   (codigo JFLAP: S)
+
+NO TERMINALES (V), |V| = 14
+  <programa>
+      Encabezado y cuerpo completo del programa: 'Begin Programa <id> ... End'.
+  <lista_instrucciones>
+      Secuencia de una o mas instrucciones del cuerpo del programa.
+  <instruccion>
+      Una instruccion del lenguaje: asignacion, salida o lazo (extension).
+  <asignacion>
+      Encabezamiento de una asignacion: simple o con expresion aritmetica.
+  <asignacion_simple>
+      Asignacion de un valor simple: <id> = <valor> #.
+  <asignacion_expresion>
+      Asignacion de un resultado aritmetico: <id> = <expresion> #.
+  <valor>
+      Valor simple que puede asignarse: un numero o un identificador.
+  <expresion>
+      Expresion aritmetica binaria: <operando> <operador> <operando>.
+  <operando>
+      Cada uno de los dos operandos de una expresion: identificador o numero.
+  <operador>
+      Operador aritmetico binario: + - * / %.
+  <salida_instr>
+      Instruccion de salida por pantalla: 'salida <id> #'.
+  <mientras_instr>
+      Extension creativa: lazo 'mientras <condicion> ... fin_mientras'.
+  <condicion>
+      Extension creativa: comparacion entre dos operandos.
+  <operador_rel>
+      Extension creativa: operador relacional < > <= >=.
+
+TERMINALES (Sigma), |Sigma| = 19
+  Palabras reservadas      : Begin, End, Programa, salida
+  Extension (reservadas)   : mientras, fin_mientras
+  Operadores aritmeticos   : + - * / %
+  Operador de asignacion   : =
+  Operadores relacionales  : < > <= >=
+  Simbolos especiales      : #
+  Clases lexicas           : IDENT, NUM
+      IDENT  : identificador: letra (letra | digito | '_')*
+      NUM    : numero: digito+ ('.' digito+)?
+  Identificadores (ER)      : [A-Za-z][A-Za-z0-9_]*
+  Numeros (ER)              : [0-9]+(\.[0-9]+)?
+
+CODIFICACION ISOMORFA PARA JFLAP 7.1
+------------------------------------------------------------------------------
+  JFLAP lee cada caracter del lado derecho: mayusculas = variables,
+  cualquier otro caracter = terminal. Para que el .cfg represente
+  esta misma gramatica, cada simbolo se codifica con un caracter.
+
+  No terminales (14):
+    <asignacion>             -> A
+    <asignacion_expresion>   -> E
+    <asignacion_simple>      -> B
+    <condicion>              -> C
+    <expresion>              -> X
+    <instruccion>            -> I
+    <lista_instrucciones>    -> L
+    <mientras_instr>         -> M
+    <operador>               -> R
+    <operador_rel>           -> T
+    <operando>               -> O
+    <programa>               -> S
+    <salida_instr>           -> Q
+    <valor>                  -> V
+
+  Terminales (19):
+    Begin                    -> b
+    End                      -> e
+    Programa                 -> p
+    salida                   -> s
+    +                        -> +
+    -                        -> -
+    *                        -> *
+    /                        -> /
+    %                        -> %
+    =                        -> =
+    #                        -> #
+    IDENT                    -> i
+    NUM                      -> n
+    mientras                 -> m
+    fin_mientras             -> f
+    <                        -> <
+    >                        -> >
+    <=                       -> l
+    >=                       -> g
+
+  Cadenas de evidencia para las capturas:
+    arbol_z_xy         inicio <I>  i=i+i#              z = x + y #
+    arbol_salida_z     inicio <I>  si#                 salida z #
+    arbol_extension    inicio <M>  mi<ni=i+n#f         mientras x < 10 x = x + 1 # fin_mientras
+
+PRODUCCIONES (P), |P| = 27
+  P01)  <programa> -> Begin Programa IDENT lista_instrucciones End
+  P02)  <lista_instrucciones> -> instruccion
+  P03)  <lista_instrucciones> -> instruccion lista_instrucciones
+  P04)  <instruccion> -> asignacion
+  P05)  <instruccion> -> salida_instr
+  P06)  <instruccion> -> mientras_instr
+  P07)  <asignacion> -> asignacion_simple
+  P08)  <asignacion> -> asignacion_expresion
+  P09)  <asignacion_simple> -> IDENT = valor #
+  P10)  <asignacion_expresion> -> IDENT = expresion #
+  P11)  <valor> -> NUM
+  P12)  <valor> -> IDENT
+  P13)  <expresion> -> operando operador operando
+  P14)  <operando> -> IDENT
+  P15)  <operando> -> NUM
+  P16)  <operador> -> +
+  P17)  <operador> -> -
+  P18)  <operador> -> *
+  P19)  <operador> -> /
+  P20)  <operador> -> %
+  P21)  <salida_instr> -> salida IDENT #
+  P22)  <mientras_instr> -> mientras condicion lista_instrucciones fin_mientras
+  P23)  <condicion> -> operando operador_rel operando
+  P24)  <operador_rel> -> <
+  P25)  <operador_rel> -> >
+  P26)  <operador_rel> -> <=
+  P27)  <operador_rel> -> >=
+
+Nota: GLC_Lab03.cfg usa la codificacion de un caracter por simbolo
+descrita arriba. Al cargarlo, JFLAP 7.1 reporta 14 variables, 19
+terminales, 27 producciones y S como simbolo inicial. El lenguaje
+generado es el mismo; solo cambia la ortografia interna de JFLAP.

@@ -1,0 +1,15 @@
+# caso	inicio	esperado	cadena_codificada
+P4-1	I	ACEPTADA	i=n#
+P4-2	I	ACEPTADA	i=i+i#
+P4-3	I	ACEPTADA	si#
+P4-4	I	RECHAZADA	in#
+P4-5	I	RECHAZADA	i=+i#
+P4-6	I	RECHAZADA	s#
+P4-7	I	RECHAZADA	i=n
+P4-8	S	ACEPTADA	bpii=n#si#e
+P3-1	I	ACEPTADA	i=n#
+P3-2	I	ACEPTADA	i=i*i#
+P3-3	I	ACEPTADA	si#
+extension-valida	S	ACEPTADA	bpimi<ni=i+n#fsi#e
+extension-invalida	S	RECHAZADA	bpimi<ni=i+n#si#e
+referencia	S	ACEPTADA	bpii=n#i=n#i=i+i#i=i+i#i=i-i#i=i-i#i=i*i#i=i/i#i=i%n#si#si#si#si#si#i=n#i=i#i=i#i=i#si#si#e

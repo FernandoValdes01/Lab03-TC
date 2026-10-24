@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<svg xmlns='http://www.w3.org/2000/svg' width='638' height='364' viewBox='0 0 638 364' font-family='DejaVu Sans, sans-serif'>
+<rect width='100%' height='100%' fill='#ffffff'/>
+<text x='319' y='24' text-anchor='middle' font-size='16' font-weight='bold' fill='#1f3864'>z = x + y #</text>
+<line x1='319.1' y1='60.0' x2='319.1' y2='114.0' stroke='#5b6b7c' stroke-width='1.2'/>
+<line x1='319.1' y1='114.0' x2='319.1' y2='168.0' stroke='#5b6b7c' stroke-width='1.2'/>
+<line x1='319.1' y1='168.0' x2='40.7' y2='222.0' stroke='#5b6b7c' stroke-width='1.2'/>
+<line x1='319.1' y1='168.0' x2='112.1' y2='222.0' stroke='#5b6b7c' stroke-width='1.2'/>
+<line x1='319.1' y1='168.0' x2='321.5' y2='222.0' stroke='#5b6b7c' stroke-width='1.2'/>
+<line x1='321.5' y1='222.0' x2='183.5' y2='276.0' stroke='#5b6b7c' stroke-width='1.2'/>
+<line x1='183.5' y1='276.0' x2='183.5' y2='330.0' stroke='#5b6b7c' stroke-width='1.2'/>
+<line x1='321.5' y1='222.0' x2='321.5' y2='276.0' stroke='#5b6b7c' stroke-width='1.2'/>
+<line x1='321.5' y1='276.0' x2='321.5' y2='330.0' stroke='#5b6b7c' stroke-width='1.2'/>
+<line x1='321.5' y1='222.0' x2='459.5' y2='276.0' stroke='#5b6b7c' stroke-width='1.2'/>
+<line x1='459.5' y1='276.0' x2='459.5' y2='330.0' stroke='#5b6b7c' stroke-width='1.2'/>
+<line x1='319.1' y1='168.0' x2='597.5' y2='222.0' stroke='#5b6b7c' stroke-width='1.2'/>
+<ellipse cx='319.1' cy='60.0' rx='59.1' ry='15' fill='#dceaf7' stroke='#2b5f9e' stroke-width='1.4'/>
+<text x='319.1' y='64.0' text-anchor='middle' font-size='13' fill='#1f3864'>&lt;instruccion&gt;</text>
+<ellipse cx='319.1' cy='114.0' rx='55.4' ry='15' fill='#dceaf7' stroke='#2b5f9e' stroke-width='1.4'/>
+<text x='319.1' y='118.0' text-anchor='middle' font-size='13' fill='#1f3864'>&lt;asignacion&gt;</text>
+<ellipse cx='319.1' cy='168.0' rx='92.4' ry='15' fill='#dceaf7' stroke='#2b5f9e' stroke-width='1.4'/>
+<text x='319.1' y='172.0' text-anchor='middle' font-size='13' fill='#1f3864'>&lt;asignacion_expresion&gt;</text>
+<ellipse cx='40.7' cy='222.0' rx='14.7' ry='15' fill='#f3f5f6' stroke='#7b8794' stroke-width='1.2'/>
+<text x='40.7' y='226.0' text-anchor='middle' font-size='13' fill='#24303f'>z</text>
+<ellipse cx='112.1' cy='222.0' rx='14.7' ry='15' fill='#f3f5f6' stroke='#7b8794' stroke-width='1.2'/>
+<text x='112.1' y='226.0' text-anchor='middle' font-size='13' fill='#24303f'>=</text>
+<ellipse cx='321.5' cy='222.0' rx='51.7' ry='15' fill='#dceaf7' stroke='#2b5f9e' stroke-width='1.4'/>
+<text x='321.5' y='226.0' text-anchor='middle' font-size='13' fill='#1f3864'>&lt;expresion&gt;</text>
+<ellipse cx='183.5' cy='276.0' rx='48.0' ry='15' fill='#dceaf7' stroke='#2b5f9e' stroke-width='1.4'/>
+<text x='183.5' y='280.0' text-anchor='middle' font-size='13' fill='#1f3864'>&lt;operando&gt;</text>
+<ellipse cx='183.5' cy='330.0' rx='14.7' ry='15' fill='#f3f5f6' stroke='#7b8794' stroke-width='1.2'/>
+<text x='183.5' y='334.0' text-anchor='middle' font-size='13' fill='#24303f'>x</text>
+<ellipse cx='321.5' cy='276.0' rx='48.0' ry='15' fill='#dceaf7' stroke='#2b5f9e' stroke-width='1.4'/>
+<text x='321.5' y='280.0' text-anchor='middle' font-size='13' fill='#1f3864'>&lt;operador&gt;</text>
+<ellipse cx='321.5' cy='330.0' rx='14.7' ry='15' fill='#f3f5f6' stroke='#7b8794' stroke-width='1.2'/>
+<text x='321.5' y='334.0' text-anchor='middle' font-size='13' fill='#24303f'>+</text>
+<ellipse cx='459.5' cy='276.0' rx='48.0' ry='15' fill='#dceaf7' stroke='#2b5f9e' stroke-width='1.4'/>
+<text x='459.5' y='280.0' text-anchor='middle' font-size='13' fill='#1f3864'>&lt;operando&gt;</text>
+<ellipse cx='459.5' cy='330.0' rx='14.7' ry='15' fill='#f3f5f6' stroke='#7b8794' stroke-width='1.2'/>
+<text x='459.5' y='334.0' text-anchor='middle' font-size='13' fill='#24303f'>y</text>
+<ellipse cx='597.5' cy='222.0' rx='14.7' ry='15' fill='#f3f5f6' stroke='#7b8794' stroke-width='1.2'/>
+<text x='597.5' y='226.0' text-anchor='middle' font-size='13' fill='#24303f'>#</text>
+</svg>

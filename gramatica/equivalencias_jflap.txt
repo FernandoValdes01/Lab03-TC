@@ -1,0 +1,73 @@
+CODIFICACION BIYECTIVA PARA JFLAP 7.1
+==============================================================================
+Cada caracter representa un simbolo completo. No se escriben espacios.
+IDENT y NUM representan clases lexicas, no lexemas concretos.
+
+NO TERMINALES
+  S = <programa>
+  L = <lista_instrucciones>
+  I = <instruccion>
+  A = <asignacion>
+  B = <asignacion_simple>
+  E = <asignacion_expresion>
+  V = <valor>
+  X = <expresion>
+  O = <operando>
+  R = <operador>
+  Q = <salida_instr>
+  M = <mientras_instr>
+  C = <condicion>
+  T = <operador_rel>
+
+TERMINALES
+  b = Begin
+  e = End
+  p = Programa
+  s = salida
+  + = +
+  - = -
+  * = *
+  / = /
+  % = %
+  = = =
+  # = #
+  i = IDENT
+  n = NUM
+  m = mientras
+  f = fin_mientras
+  < = <
+  > = >
+  l = <=
+  g = >=
+
+PRODUCCIONES (misma numeracion del informe)
+  P01) S -> bpiLe
+  P02) L -> I
+  P03) L -> IL
+  P04) I -> A
+  P05) I -> Q
+  P06) I -> M
+  P07) A -> B
+  P08) A -> E
+  P09) B -> i=V#
+  P10) E -> i=X#
+  P11) V -> n
+  P12) V -> i
+  P13) X -> ORO
+  P14) O -> i
+  P15) O -> n
+  P16) R -> +
+  P17) R -> -
+  P18) R -> *
+  P19) R -> /
+  P20) R -> %
+  P21) Q -> si#
+  P22) M -> mCLf
+  P23) C -> OTO
+  P24) T -> <
+  P25) T -> >
+  P26) T -> l
+  P27) T -> g
+
+Ejemplos: z = x + y # -> i=i+i#; salida z # -> si#.
+Para instrucciones sueltas seleccionar I como inicio; para programas, S.
