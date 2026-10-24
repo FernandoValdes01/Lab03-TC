@@ -115,7 +115,7 @@
 \rowcolor{azulclaro}\textbf{Antecedente} & \textbf{Información}\\\hline
 Asignatura & Teoría de la Computación INFO1148\\\hline
 Carrera & Ingeniería Civil en Informática\\\hline
-Docente & M. Lévano\\\hline
+Docente & Marcos Lévano\\\hline
 Integrantes & Juan Muñoz Veloso y Fernando Valdés Gómez\\\hline
 Fecha & 20 de octubre de 2026\\\hline
 \end{tabularx}
@@ -132,7 +132,7 @@ obliga a ampliar tanto el conjunto de terminales como el de no terminales. Toda 
 apoya en un analizador descendente recursivo con retroceso entregado junto al informe. Además, las
 tres derivaciones principales se reprodujeron en JFLAP 7.1: el archivo
 \texttt{gramatica/\allowbreak GLC\_Lab03.cfg} usa una codificación isomorfa de un carácter por
-símbolo, explicada en la sección 2.6, y las capturas de los árboles se incluyen como evidencia. La
+símbolo, explicada en el anexo D, y las capturas de los árboles se incluyen como evidencia. La
 lectura del archivo se comprobó con la propia biblioteca de JFLAP 7.1; el detalle está en el
 anexo D.
 
@@ -168,44 +168,18 @@ Números & Clase léxica \texttt{NUM} &
 Forma: \texttt{[0-9]+(\allowbreak\textbackslash.[0-9]+)?}. Cubre \texttt{20}, \texttt{0} y \texttt{1.345}.\\\hline
 \end{longtable}
 
-La extensión de la sección 2.5 agrega dos palabras reservadas (\texttt{mientras},
+La extensión de la sección 3 agrega dos palabras reservadas (\texttt{mientras},
 \texttt{fin\_mientras}) y cuatro operadores relacionales (\texttt{<}, \texttt{>}, \texttt{\textless=},
 \texttt{\textgreater=}), que se describen en detalle más adelante.
 
 \apartado{b) No terminales y función de cada uno}
 
-Los no terminales son los símbolos que se pueden derivar: representan las estructuras del lenguaje.
-La tabla siguiente justifica el papel de cada uno dentro de la gramática.
-
-\begin{longtable}{|L{4.8cm}|L{\dimexpr\textwidth-4.8cm-4\tabcolsep-3\arrayrulewidth\relax}|}
-\hline
-\rowcolor{azulclaro}\textbf{No terminal} & \textbf{Función}\\\hline
-\endfirsthead
-\hline
-\rowcolor{azulclaro}\textbf{No terminal} & \textbf{Función}\\\hline
-\endhead
-
-\nt{programa} & Encabezado y cuerpo completo del programa: \texttt{Begin Programa <id> ... End}.\\\hline
-\nt{lista\_instrucciones} & Secuencia de una o más instrucciones del cuerpo del programa.\\\hline
-\nt{instruccion} & Una instrucción del lenguaje: asignación, salida o lazo.\\\hline
-\nt{asignacion} & Encabezamiento común de los dos tipos de asignación.\\\hline
-\nt{asignacion\_simple} & Asignación de un valor simple: \texttt{<id> = <valor> \#}.\\\hline
-\nt{asignacion\_expresion} & Asignación del resultado de una operación: \texttt{<id> = <expresion> \#}.\\\hline
-\nt{valor} & Valor simple asignable: un número o un identificador.\\\hline
-\nt{expresion} & Expresión aritmética binaria: \texttt{<operando> <operador> <operando>}.\\\hline
-\nt{operando} & Cada uno de los dos operandos de una expresión.\\\hline
-\nt{operador} & Operador aritmético binario: \texttt{+ - * / \%}.\\\hline
-\nt{salida\_instr} & Instrucción de salida por pantalla: \texttt{salida <id> \#}.\\\hline
-\nt{mientras\_instr} & Extensión creativa: lazo \texttt{mientras <condicion> ... fin\_mientras}.\\\hline
-\nt{condicion} & Extensión creativa: comparación entre dos operandos.\\\hline
-\nt{operador\_rel} & Extensión creativa: operador relacional \texttt{< > \textless= \textgreater=}.\\\hline
-\end{longtable}
-
-Dos nombres llevan un sufijo (\nt{salida\_instr}, \nt{mientras\_instr}) porque la terminal
-\texttt{salida} y la terminal \texttt{mientras} existen en $\Sigma$. La condición formal
-$V\cap\Sigma=\emptyset$ exige que un no terminal y un terminal no se llamen igual, de modo que se
-distinguen los símbolos \nt{salida\_instr} y \nt{mientras\_instr} de las palabras reservadas
-correspondientes.
+{\raggedright
+Los no terminales identificados son \nt{programa}, \nt{lista\_instrucciones},
+\nt{instruccion}, \nt{asignacion}, \nt{asignacion\_simple}, \nt{asignacion\_expresion},
+\nt{valor}, \nt{expresion}, \nt{operando}, \nt{operador} y \nt{salida\_instr}.
+La extensión agrega \nt{mientras\_instr}, \nt{condicion} y \nt{operador\_rel}.
+La función de cada uno se explica en el apartado 2.2 b).\par}
 
 \apartado{c) Símbolo inicial}
 
@@ -267,7 +241,7 @@ La tabla siguiente contiene el conjunto completo de reglas $P$, con la justifica
 En el lado derecho se omiten los ángulos para abreviar: los nombres definidos en $V$ son
 no terminales; los restantes símbolos pertenecen a $\Sigma$.
 Las reglas P01 a P21, excepto P06, describen el lenguaje del enunciado; P06 y P22 a P27 corresponden a
-la extensión creativa de la sección 2.5 y se analizan allí.
+la extensión creativa de la sección 3 y se analizan allí.
 
 \begin{longtable}{|L{1.2cm}|L{\dimexpr\textwidth-1.2cm-5.0cm-6\tabcolsep-4\arrayrulewidth\relax}|L{5.0cm}|}
 \hline
@@ -325,7 +299,42 @@ P26 & \regla{operador\_rel}{\textless=} & Operador relacional menor o igual que.
 P27 & \regla{operador\_rel}{\textgreater=} & Operador relacional mayor o igual que.\\\hline
 \end{longtable}
 
-\apartado{b) Diferenciación entre asignación simple, asignación con expresión y salida}
+\apartado{b) No terminales y función de cada uno}
+
+Los no terminales son los símbolos que se pueden derivar: representan las estructuras del lenguaje.
+La tabla siguiente justifica el papel de cada uno dentro de la gramática.
+
+\begin{longtable}{|L{4.8cm}|L{\dimexpr\textwidth-4.8cm-4\tabcolsep-3\arrayrulewidth\relax}|}
+\hline
+\rowcolor{azulclaro}\textbf{No terminal} & \textbf{Función}\\\hline
+\endfirsthead
+\hline
+\rowcolor{azulclaro}\textbf{No terminal} & \textbf{Función}\\\hline
+\endhead
+
+\nt{programa} & Encabezado y cuerpo completo del programa: \texttt{Begin Programa <id> ... End}.\\\hline
+\nt{lista\_instrucciones} & Secuencia de una o más instrucciones del cuerpo del programa.\\\hline
+\nt{instruccion} & Una instrucción del lenguaje: asignación, salida o lazo.\\\hline
+\nt{asignacion} & Encabezamiento común de los dos tipos de asignación.\\\hline
+\nt{asignacion\_simple} & Asignación de un valor simple: \texttt{<id> = <valor> \#}.\\\hline
+\nt{asignacion\_expresion} & Asignación del resultado de una operación: \texttt{<id> = <expresion> \#}.\\\hline
+\nt{valor} & Valor simple asignable: un número o un identificador.\\\hline
+\nt{expresion} & Expresión aritmética binaria: \texttt{<operando> <operador> <operando>}.\\\hline
+\nt{operando} & Cada uno de los dos operandos de una expresión.\\\hline
+\nt{operador} & Operador aritmético binario: \texttt{+ - * / \%}.\\\hline
+\nt{salida\_instr} & Instrucción de salida por pantalla: \texttt{salida <id> \#}.\\\hline
+\nt{mientras\_instr} & Extensión creativa: lazo \texttt{mientras <condicion> ... fin\_mientras}.\\\hline
+\nt{condicion} & Extensión creativa: comparación entre dos operandos.\\\hline
+\nt{operador\_rel} & Extensión creativa: operador relacional \texttt{< > \textless= \textgreater=}.\\\hline
+\end{longtable}
+
+Dos nombres llevan un sufijo (\nt{salida\_instr}, \nt{mientras\_instr}) porque la terminal
+\texttt{salida} y la terminal \texttt{mientras} existen en $\Sigma$. La condición formal
+$V\cap\Sigma=\emptyset$ exige que un no terminal y un terminal no se llamen igual, de modo que se
+distinguen los símbolos \nt{salida\_instr} y \nt{mientras\_instr} de las palabras reservadas
+correspondientes.
+
+\apartado{c) Diferenciación entre asignación simple, asignación con expresión y salida}
 
 El enunciado pide diferenciar explícitamente las tres construcciones. La diferencia no es de
 nombre, sino de posición dentro de la regla y de la forma del lado derecho:
@@ -348,7 +357,7 @@ operador binario. En los casos ensayados, cada cadena aceptada tiene un único �
 Este conteo comprueba los ejemplos, pero por sí solo no demuestra la ausencia de ambigüedad
 para todas las cadenas del lenguaje.
 
-\apartado{c) Verificación con el programa de referencia}
+\apartado{d) Verificación con el programa de referencia}
 
 El programa de referencia del enunciado se reconoce completo: el analizador lo acepta como
 derivado de \nt{programa}. La derivación por la izquierda tiene 108 pasos; las formas sentenciales
@@ -406,7 +415,8 @@ $\Rightarrow$ salida z \# \quad [P21]
 \end{quote}
 
 La derivación es más corta porque la instrucción de salida no tiene partes que expandir: los tres
-símbolos de la derecha de P21 son ya terminales.
+símbolos de la derecha de P21 son ya terminales. El árbol adicional de esta cadena se
+incluye en el anexo E.
 
 \figuraaccesible{figuras/arbol_z_xy.pdf}{c) Árbol sintáctico de \texttt{z = x + y \#}}{Árbol de
 derivación de la cadena \texttt{z = x + y \#} obtenido con la herramienta de validación entregada
@@ -414,12 +424,7 @@ junto al informe.}{La raíz es \nt{instruccion}; los nodos internos son los no t
 debían expandirse y las hojas son los terminales leídos, de izquierda a derecha: \texttt{z},
 \texttt{=}, \texttt{x}, \texttt{+}, \texttt{y} y \texttt{\#}.}{fig:arbol-zxy}
 
-\figuraaccesible{figuras/arbol_salida_z.pdf}{d) Árbol sintáctico de \texttt{salida z \#}}{Árbol de
-derivación de la cadena \texttt{salida z \#}.}{La raíz \nt{instruccion} se expande con P05 hasta
-\nt{salida\_instr}, que a su vez se expande con P21. Las tres hojas son los terminales
-\texttt{salida}, \texttt{z} y \texttt{\#}.}{fig:arbol-salida}
-
-\apartado{e) Relación entre la raíz, los no terminales, los terminales y las hojas}
+\apartado{d) Relación entre la raíz, los no terminales, los terminales y las hojas}
 
 La raíz \nt{instruccion} identifica la estructura que se deriva. Los nodos internos son
 no terminales y sus hijos representan el lado derecho de la producción aplicada. Las hojas
@@ -429,7 +434,7 @@ El árbol conserva la jerarquía de la derivación, mientras que los pasos por l
 indican en qué orden se expandieron los no terminales.
 
 \Needspace{14\baselineskip}
-\apartado{f) Otras cadenas cuya generación se debe determinar}
+\apartado{e) Validación de las tres cadenas adicionales}
 
 Las tres cadenas de la Pregunta 3.14 se generan con la gramática propuesta:
 
@@ -457,9 +462,9 @@ en el archivo \texttt{herramientas/\allowbreak validar\_gramatica.py}. El analiz
 entregadas y devuelve, cuando la cadena es válida, el árbol sintáctico correspondiente. El motor de
 análisis de JFLAP 7.1 trabaja carácter a carácter: las letras mayúsculas son variables y cualquier
 otro carácter es terminal. Para que el archivo \texttt{gramatica/\allowbreak GLC\_Lab03.cfg}
-represente la misma gramática, cada símbolo se codifica con un solo carácter (sección 2.6). El
+represente la misma gramática, cada símbolo se codifica con un solo carácter (anexo D). El
 archivo se cargó con la propia biblioteca de JFLAP 7.1 y reporta 14 variables, 19 terminales y 27
-producciones, con \texttt{S} como símbolo inicial (anexo D). Las capturas de la sección 2.6 muestran
+producciones, con \texttt{S} como símbolo inicial (anexo D). Las capturas del anexo D muestran
 las derivaciones de las tres cadenas principales en JFLAP.
 
 \apartado{b) Resultado del análisis de los ocho casos}
@@ -499,34 +504,7 @@ pero \texttt{+} no puede aparecer antes del primer operando. En los casos 4, 6 y
 respectivamente, \texttt{=}, el identificador de salida y \texttt{\#}. El análisis comprueba
 la estructura; no comprueba declaración de variables, tipos ni divisiones por cero.
 
-\apartado{d) Cadenas de control adicionales}
-
-Para reforzar la validación se analizaron otras 24 cadenas, incluidos tres controles
-Unicode; la tabla muestra las más representativas. Las rechazadas confirman, cada una, una
-restricción del lenguaje.
-
-\begin{longtable}{|L{6.6cm}|L{2.6cm}|L{\dimexpr\textwidth-6.6cm-2.6cm-6\tabcolsep-4\arrayrulewidth\relax}|}
-\hline
-\rowcolor{azulclaro}\textbf{Cadena} & \textbf{Resultado} & \textbf{Observación}\\\hline
-\endfirsthead
-\hline
-\rowcolor{azulclaro}\textbf{Cadena} & \textbf{Resultado} & \textbf{Observación}\\\hline
-\endhead
-
-\texttt{x = 1.345 \#} & Aceptada & Número real con punto decimal.\\\hline
-\texttt{m = k \% 10 \#} & Aceptada & Operador módulo (P20).\\\hline
-\texttt{t = k/z\#} & Aceptada & División sin espacios (P19).\\\hline
-\texttt{temporal = x \#} & Aceptada & Asignación del valor de otra variable (P12).\\\hline
-\texttt{z = x + y * z \#} & Rechazada & Expresión con dos operadores: la gramática define la operación binaria del enunciado.\\\hline
-\texttt{Begin Programa p End} & Rechazada & Cuerpo vacío: la lista de instrucciones exige al menos una (P02, P03).\\\hline
-\texttt{x == 20 \#} & Rechazada & Doble signo igual: no existe la producción que lo permita.\\\hline
-\texttt{9x = 20 \#} & Rechazada & Un identificador no puede empezar con un dígito.\\\hline
-\texttt{salida 20 \#} & Rechazada & La salida exige un identificador, no un número.\\\hline
-\texttt{SALIDA x \#} & Rechazada & Las palabras reservadas distinguen mayúsculas.\\\hline
-\texttt{begin Programa p x = 1 \# End} & Rechazada & \texttt{Begin} es la única forma de abrir un programa.\\\hline
-\end{longtable}
-
-\subsection*{2.5 Extensión creativa -- Opción B: repetición}
+\section*{3. Extensión de la gramática}
 
 De las cinco opciones propuestas se eligió la \textbf{opción B, repetición}, porque introduce una
 construcción que anida otras instrucciones y obliga a ampliar la gramática en los dos sentidos:
@@ -635,7 +613,114 @@ P22. Se distinguen las cuatro partes de la construcción: la palabra reservada \
 condición \nt{condicion}, el cuerpo \nt{lista\_instrucciones} y el cierre
 \texttt{fin\_mientras}.}{fig:arbol-extension}
 
-\subsection*{2.6 Evidencia de derivación en JFLAP 7.1}
+\section*{4. Conclusiones}
+
+La gramática extendida describe el lenguaje del enunciado con 14 no terminales, 19 terminales y
+27 producciones, con \nt{programa} como símbolo inicial. Tratar los identificadores y los números
+como clases léxicas permite mantener un conjunto finito de reglas y separar el análisis léxico del
+sintáctico. Las producciones distinguen la asignación simple, la asignación con expresión y la
+salida. La validación acepta el programa de referencia completo y rechaza los cuatro casos
+incorrectos del enunciado; cada cadena aceptada en las pruebas tiene un único árbol sintáctico.
+La extensión \texttt{mientras ... fin\_mientras} incorpora repetición y anidamiento mediante nuevas
+reglas que reutilizan los operandos y las listas de instrucciones de la gramática base.
+
+JFLAP 7.1 trabaja con símbolos de un carácter, por lo que se definió una codificación isomorfa
+para representar la misma gramática en el archivo entregado. Su biblioteca comprobó la lectura de
+las 27 producciones y las capturas del anexo D documentan las tres derivaciones principales.
+El analizador propio valida las cadenas por tokens y genera los árboles legibles. Estas pruebas
+comprueban la estructura sintáctica de los casos ensayados; no comprueban declaración de variables,
+tipos ni divisiones por cero, y tampoco constituyen una demostración general de ausencia de
+ambigüedad.
+
+\section*{5. Consideraciones de entrega}
+
+La gramática para JFLAP se encuentra en GitHub mediante el
+\href{https://github.com/FernandoValdes01/teoria-computacion/blob/main/laboratorios/lab3/lab03fixon/gramatica/GLC_Lab03.cfg}{enlace directo a \texttt{GLC\_Lab03.cfg}}.
+El archivo usa la codificación de un carácter por símbolo descrita en el anexo D.
+
+La carpeta de entrega contiene el informe y los siguientes archivos:
+
+\begin{itemize}
+  \item \texttt{Lab03\_Juan\_Munoz\_Veloso.pdf}: informe del laboratorio.
+  \item \texttt{gramatica/\allowbreak GLC\_Lab03.cfg}: gramática en el formato XML de JFLAP 7.1, con
+  la codificación isomorfa de un carácter por símbolo (14 variables, 19 terminales, 27 producciones).
+  \item \texttt{gramatica/\allowbreak GLC\_Lab03.txt}: definición formal legible de $G=(V,\Sigma,P,S)$
+  y tabla de codificación para JFLAP.
+  \item \texttt{herramientas/\allowbreak gramatica\_lab3.py}: especificación de la gramática (fuente única de
+  verdad).
+  \item \texttt{herramientas/\allowbreak validar\_gramatica.py}: analizador, generador de derivaciones y de
+  árboles.
+  \item \texttt{herramientas/\allowbreak generar\_cfg\_jflap.py}: generador del archivo de JFLAP y de
+  la tabla de codificación.
+  \item \texttt{herramientas/\allowbreak VerificarGramaticaJFLAP.\allowbreak java}: verificador del archivo de JFLAP con
+  la biblioteca de JFLAP 7.1.
+  \item \texttt{herramientas/\allowbreak CapturarArbolJFLAP.\allowbreak java}: harness que reproduce las capturas de los
+  árboles con JFLAP 7.1.
+  \item \texttt{figuras/}: árboles sintácticos en PDF vectorial, con originales SVG y copias PNG, y
+  capturas de JFLAP 7.1 en \texttt{jflap\_*.png}.
+  \item \texttt{evidencias/\allowbreak evidencias\_lab03.txt} y \texttt{evidencias/\allowbreak verificacion\_jflap.txt}:
+  registro de validación propia y de verificación del archivo de JFLAP, respectivamente.
+  \item \texttt{README.md}: guía de la carpeta de entrega y de cómo reproducir las evidencias.
+\end{itemize}
+
+Las figuras~\ref{fig:arbol-zxy}, \ref{fig:arbol-salida} y \ref{fig:arbol-extension} son esquemas
+legibles generados por el analizador propio; las figuras~\ref{fig:jflap-zxy},
+\ref{fig:jflap-salida} y \ref{fig:jflap-extension} son capturas de JFLAP 7.1 de las mismas
+cadenas. Las evidencias adicionales se reúnen en los anexos C, D y E.
+
+\clearpage
+\section*{Anexos}
+
+\subsection*{Anexo A -- La gramática en su versión carácter a carácter}
+La versión entregada trata los
+identificadores y los números como clases léxicas. Si se quisiera llevar esa descripción al
+interior de la gramática, bastaría reemplazar \texttt{IDENT} y \texttt{NUM} por reglas como
+\nt{identificador} $\rightarrow$ \nt{letra} \nt{resto\_id},
+\nt{resto\_id} $\rightarrow$ \nt{resto\_id} \nt{letra} \,|\, \nt{resto\_id} \nt{digito} \,|\,
+\nt{resto\_id} \texttt{\_} \,|\, $\varepsilon$, y
+\nt{numero} $\rightarrow$ \nt{entero} \,|\, \nt{entero} \texttt{.} \nt{entero},
+\nt{entero} $\rightarrow$ \nt{digito} \nt{entero} \,|\, \nt{digito}. Esa versión exige enumerar las
+52 letras y los 10 dígitos, lo que multiplica el tamaño de la gramática sin aportar capacidad
+descriptiva: es la razón por la que se prefirió la versión con clases léxicas.
+
+\subsection*{Anexo B -- Derivación completa del programa de referencia}
+El archivo \texttt{evidencias/\allowbreak evidencias\_lab03.txt} contiene, en su sección 5,
+las 108 aplicaciones de producciones.
+
+\subsection*{Anexo C -- Registro de la validación automática}
+El mismo archivo, en sus secciones 2, 2.b,
+3, 6 y 7, registra el veredicto de los ocho casos, el número de árboles sintácticos de cada uno
+(uno en todos los casos aceptados, lo que confirma análisis único en esos ejemplos), el análisis de las cadenas
+adicionales y los resultados de la extensión creativa.
+
+\apartado{Cadenas de control adicionales}
+
+Para reforzar la validación se analizaron otras 24 cadenas, incluidos tres controles
+Unicode; la tabla muestra las más representativas. Las rechazadas confirman, cada una, una
+restricción del lenguaje.
+
+\begin{longtable}{|L{6.6cm}|L{2.6cm}|L{\dimexpr\textwidth-6.6cm-2.6cm-6\tabcolsep-4\arrayrulewidth\relax}|}
+\hline
+\rowcolor{azulclaro}\textbf{Cadena} & \textbf{Resultado} & \textbf{Observación}\\\hline
+\endfirsthead
+\hline
+\rowcolor{azulclaro}\textbf{Cadena} & \textbf{Resultado} & \textbf{Observación}\\\hline
+\endhead
+
+\texttt{x = 1.345 \#} & Aceptada & Número real con punto decimal.\\\hline
+\texttt{m = k \% 10 \#} & Aceptada & Operador módulo (P20).\\\hline
+\texttt{t = k/z\#} & Aceptada & División sin espacios (P19).\\\hline
+\texttt{temporal = x \#} & Aceptada & Asignación del valor de otra variable (P12).\\\hline
+\texttt{z = x + y * z \#} & Rechazada & Expresión con dos operadores: la gramática define la operación binaria del enunciado.\\\hline
+\texttt{Begin Programa p End} & Rechazada & Cuerpo vacío: la lista de instrucciones exige al menos una (P02, P03).\\\hline
+\texttt{x == 20 \#} & Rechazada & Doble signo igual: no existe la producción que lo permita.\\\hline
+\texttt{9x = 20 \#} & Rechazada & Un identificador no puede empezar con un dígito.\\\hline
+\texttt{salida 20 \#} & Rechazada & La salida exige un identificador, no un número.\\\hline
+\texttt{SALIDA x \#} & Rechazada & Las palabras reservadas distinguen mayúsculas.\\\hline
+\texttt{begin Programa p x = 1 \# End} & Rechazada & \texttt{Begin} es la única forma de abrir un programa.\\\hline
+\end{longtable}
+
+\subsection*{Anexo D -- Verificación y capturas de JFLAP 7.1}
 
 JFLAP 7.1 no acepta terminales de varios caracteres: su analizador recorre el lado derecho de cada
 producción carácter a carácter y considera variable a toda letra mayúscula. Para que el archivo
@@ -678,7 +763,7 @@ Con esa codificación, JFLAP lee 14 variables, 19 terminales y 27 producciones, 
 es \texttt{S}, que corresponde a \nt{programa}. La salida del verificador está en
 \texttt{evidencias/\allowbreak verificacion\_jflap.txt}. Las tres derivaciones se reproducen con las
 cadenas codificadas de la tabla siguiente; en cada captura se indica el no terminal desde el que se
-inicia la derivación, de modo que el árbol coincida con el esquema legible de las figuras c), d) y e).
+inicia la derivación, de modo que el árbol coincida con el esquema legible de las figuras~\ref{fig:arbol-zxy}, \ref{fig:arbol-salida} y \ref{fig:arbol-extension}.
 
 \Needspace{8\baselineskip}
 \begin{longtable}{|L{4.7cm}|L{3.1cm}|L{3.3cm}|}
@@ -694,111 +779,29 @@ inicia la derivación, de modo que el árbol coincida con el esquema legible de 
 \texttt{mientras x < 10 x = x + 1 \# fin\_mientras} & \tm{mi\textless ni=i+n\#f} & \nt{mientras\_instr}\\\hline
 \end{longtable}
 
-\figuraamplia{figuras/jflap_arbol_z_xy.png}{f) Captura de JFLAP 7.1 para \texttt{z = x + y \#}}{Árbol
+\figuraamplia{figuras/jflap_arbol_z_xy.png}{a) Captura de JFLAP 7.1 para \texttt{z = x + y \#}}{Árbol
 de derivación producido por JFLAP 7.1 al analizar la cadena codificada \texttt{i=i+i\#} desde
 \nt{instruccion}.}{La raíz es \texttt{I}; las hojas \texttt{i}, \texttt{=}, \texttt{i}, \texttt{+},
 \texttt{i} y \texttt{\#} corresponden a \texttt{z}, \texttt{=}, \texttt{x}, \texttt{+}, \texttt{y} y
 \texttt{\#}. La barra inferior muestra el estado final de JFLAP: \texttt{Derivations complete}.}{fig:jflap-zxy}
 
-\figuraamplia{figuras/jflap_arbol_salida_z.png}{g) Captura de JFLAP 7.1 para \texttt{salida z \#}}{Árbol
+\figuraamplia{figuras/jflap_arbol_salida_z.png}{b) Captura de JFLAP 7.1 para \texttt{salida z \#}}{Árbol
 de derivación de la cadena codificada \texttt{si\#} desde \nt{instruccion}.}{La raíz es \texttt{I}, que
 se expande con P05 hasta \texttt{Q}; las hojas \texttt{s}, \texttt{i} y \texttt{\#} son
 \texttt{salida}, \texttt{z} y \texttt{\#}.}{fig:jflap-salida}
 
-\figuraamplia{figuras/jflap_arbol_extension.png}{h) Captura de JFLAP 7.1 para la extensión creativa}{Árbol
+\figuraamplia{figuras/jflap_arbol_extension.png}{c) Captura de JFLAP 7.1 para la extensión creativa}{Árbol
 de derivación de la cadena codificada \texttt{mi\textless ni=i+n\#f} desde \nt{mientras\_instr}.}{La
 raíz \texttt{M} se expande con P22 y reproduce las cuatro partes del lazo: \texttt{mientras},
 \nt{condicion}, \nt{lista\_instrucciones} y \texttt{fin\_mientras}. Esta captura ejercita P22,
 P23 y P24; las producciones P25--P27 quedan definidas, pero el ejemplo no usa
 \texttt{>}, \texttt{\textless=} ni \texttt{\textgreater=}.}{fig:jflap-extension}
 
-\section*{3. Conclusiones}
+\subsection*{Anexo E -- Árbol adicional de la instrucción de salida}
 
-El lenguaje de programación simplificado del enunciado queda descrito por una gramática libre de
-contexto de 14 no terminales, 19 terminales y 27 reglas, con \nt{programa} como símbolo inicial. La
-decisión de mayor alcance fue tratar los identificadores y los números como clases léxicas y no
-como enumeraciones: mantiene la gramática finita, independiente del vocabulario y coherente con la
-separación entre análisis léxico y sintáctico. La construcción de la gramática mostró además que
-las tres formas de instrucción del enunciado se distinguen por la estructura del lado derecho de
-sus reglas, y que en las pruebas cada cadena aceptada tuvo un único árbol sintáctico.
-
-La validación confirma que la gramática representa correctamente el programa de referencia completo
-y que rechaza, identificando con precisión el elemento faltante, los cuatro casos incorrectos del
-enunciado: el signo igual ausente, el signo unario no permitido, el argumento ausente en la salida
-y el terminador \texttt{\#} faltante. La extensión creativa con el lazo \texttt{mientras} mostró que
-añadir una construcción al lenguaje es un ejercicio de ampliación coherente de la gramática, con
-nuevos terminales, nuevos no terminales y nuevas reglas que conviven con las anteriores sin
-alterar el lenguaje previo.
-
-Por último, la experiencia con las herramientas fue instructiva: JFLAP 7.1 permite almacenar,
-mostrar y derivar la gramática, pero su motor trabaja símbolo a símbolo y no reconoce terminales de
-varios caracteres como \texttt{Begin} o \texttt{salida}. Para usarlo sin alterar el lenguaje se
-definió una codificación isomorfa de un carácter por símbolo; con ella el archivo carga 14
-variables, 19 terminales y 27 producciones, y las capturas de la sección 2.6 muestran los árboles de
-las tres derivaciones principales. El analizador propio sigue siendo la herramienta de validación
-por tokens y el que produce los esquemas legibles del informe.
-
-\section*{4. Archivos adjuntos}
-
-La carpeta de entrega contiene el informe y los siguientes archivos:
-
-\begin{itemize}
-  \item \texttt{Lab03\_Juan\_Munoz\_Veloso.pdf}: informe del laboratorio.
-  \item \texttt{gramatica/\allowbreak GLC\_Lab03.cfg}: gramática en el formato XML de JFLAP 7.1, con
-  la codificación isomorfa de un carácter por símbolo (14 variables, 19 terminales, 27 producciones).
-  \item \texttt{gramatica/\allowbreak GLC\_Lab03.txt}: definición formal legible de $G=(V,\Sigma,P,S)$
-  y tabla de codificación para JFLAP.
-  \item \texttt{herramientas/\allowbreak gramatica\_lab3.py}: especificación de la gramática (fuente única de
-  verdad).
-  \item \texttt{herramientas/\allowbreak validar\_gramatica.py}: analizador, generador de derivaciones y de
-  árboles.
-  \item \texttt{herramientas/\allowbreak generar\_cfg\_jflap.py}: generador del archivo de JFLAP y de
-  la tabla de codificación.
-  \item \texttt{herramientas/\allowbreak VerificarGramaticaJFLAP.\allowbreak java}: verificador del archivo de JFLAP con
-  la biblioteca de JFLAP 7.1.
-  \item \texttt{herramientas/\allowbreak CapturarArbolJFLAP.\allowbreak java}: harness que reproduce las capturas de los
-  árboles con JFLAP 7.1.
-  \item \texttt{figuras/}: árboles sintácticos en PDF vectorial, con originales SVG y copias PNG, y
-  capturas de JFLAP 7.1 en \texttt{jflap\_*.png}.
-  \item \texttt{evidencias/\allowbreak evidencias\_lab03.txt} y \texttt{evidencias/\allowbreak verificacion\_jflap.txt}:
-  registro de validación propia y de verificación del archivo de JFLAP, respectivamente.
-  \item \texttt{README.md}: guía de la carpeta de entrega y de cómo reproducir las evidencias.
-\end{itemize}
-
-Las figuras c), d) y e) son esquemas legibles generados por el analizador propio; las figuras f),
-g) y h) son capturas de JFLAP 7.1. Ambas representan las mismas derivaciones.
-
-\section*{Anexos}
-
-\textbf{Anexo A -- La gramática en su versión carácter a carácter.} La versión entregada trata los
-identificadores y los números como clases léxicas. Si se quisiera llevar esa descripción al
-interior de la gramática, bastaría reemplazar \texttt{IDENT} y \texttt{NUM} por reglas como
-\nt{identificador} $\rightarrow$ \nt{letra} \nt{resto\_id},
-\nt{resto\_id} $\rightarrow$ \nt{resto\_id} \nt{letra} \,|\, \nt{resto\_id} \nt{digito} \,|\,
-\nt{resto\_id} \texttt{\_} \,|\, $\varepsilon$, y
-\nt{numero} $\rightarrow$ \nt{entero} \,|\, \nt{entero} \texttt{.} \nt{entero},
-\nt{entero} $\rightarrow$ \nt{digito} \nt{entero} \,|\, \nt{digito}. Esa versión exige enumerar las
-52 letras y los 10 dígitos, lo que multiplica el tamaño de la gramática sin aportar capacidad
-descriptiva: es la razón por la que se prefirió la versión con clases léxicas.
-
-\textbf{Anexo B -- Derivación completa del programa de referencia.} El registro de las 108 aplicaciones de producciones está en el archivo
-\texttt{evidencias/\allowbreak evidencias\_lab03.txt}, sección 5.
-
-\textbf{Anexo C -- Registro de la validación automática.} El mismo archivo, en sus secciones 2, 2.b,
-3, 6 y 7, registra el veredicto de los ocho casos, el número de árboles sintácticos de cada uno
-(uno en todos los casos aceptados, lo que confirma análisis único en esos ejemplos), el análisis de las cadenas
-adicionales y los resultados de la extensión creativa.
-
-\textbf{Anexo D -- Verificación y capturas de JFLAP 7.1.} La pauta permite usar JFLAP u otra
-herramienta gráfica autorizada para el árbol y exige archivo y capturas si se utiliza JFLAP. Se
-entrega \texttt{gramatica/\allowbreak GLC\_Lab03.cfg}, que JFLAP 7.1 carga como una gramática de 14
-variables, 19 terminales y 27 producciones, con \texttt{S} como símbolo inicial. Como JFLAP
-interpreta cada carácter por separado, el archivo usa la codificación isomorfa de la sección 2.6:
-no es una gramática distinta, sino la misma con símbolos de un carácter. La salida del verificador
-está en \texttt{evidencias/\allowbreak verificacion\_jflap.txt}. Las capturas de las tres
-derivaciones están en las figuras f), g) y h), generadas con JFLAP 7.1 y el harness
-\texttt{herramientas/\allowbreak CapturarArbolJFLAP.\allowbreak java}. El MCP de JFLAP disponible
-solo expone autómatas finitos, por lo que no se usó para GLC; se usó la biblioteca y la interfaz de
-JFLAP 7.1 instalada.
+\figuraaccesible{figuras/arbol_salida_z.pdf}{Árbol sintáctico de \texttt{salida z \#}}{Árbol de
+derivación de la cadena \texttt{salida z \#}.}{La raíz \nt{instruccion} se expande con P05 hasta
+\nt{salida\_instr}, que a su vez se expande con P21. Las tres hojas son los terminales
+\texttt{salida}, \texttt{z} y \texttt{\#}.}{fig:arbol-salida}
 
 \end{document}

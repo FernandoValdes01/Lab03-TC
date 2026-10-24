@@ -137,10 +137,8 @@ rsvg-convert -f pdf1.4 figuras/arbol_z_xy.svg -o figuras/arbol_z_xy.pdf
 
 ## Acceso
 
-Repositorio privado: https://github.com/FernandoValdes01/Lab03-TC
+Enlace de entrega de la gramática:
+[GLC_Lab03.cfg en GitHub](https://github.com/FernandoValdes01/teoria-computacion/blob/main/laboratorios/lab3/lab03fixon/gramatica/GLC_Lab03.cfg).
 
-Archivo de JFLAP:
-https://github.com/FernandoValdes01/Lab03-TC/blob/main/gramatica/GLC_Lab03.cfg
-
-Los enlaces a archivos estarán disponibles después del primer commit y push.
-Para que el docente pueda abrirlos, su cuenta debe tener acceso al repositorio privado.
+Repositorio de trabajo:
+[Lab03-TC](https://github.com/FernandoValdes01/Lab03-TC).
