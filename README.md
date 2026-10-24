@@ -15,6 +15,7 @@ de repetición `mientras ... fin_mientras`.
 | `Lab03_Juan_Munoz_Veloso.pdf` | Informe del laboratorio. |
 | `Lab03_Juan_Munoz_Veloso.tex` | Fuente del informe. |
 | `gramatica/GLC_Lab03.cfg` | Gramática compatible con JFLAP 7.1. |
+| `gramatica/GLC_Lab03.jff` | Copia idéntica de la gramática con extensión `.jff`, comprobada con JFLAP 7.1. |
 | `gramatica/GLC_Lab03.txt` | Definición formal y codificación de símbolos. |
 | `gramatica/equivalencias_jflap.txt` | Correspondencia entre símbolos legibles y códigos de JFLAP. |
 | `gramatica/casos_jflap.tsv` | Casos de prueba codificados y resultados esperados. |
@@ -68,6 +69,10 @@ suelta se selecciona `I`; para el cuerpo de un lazo, `M`. Ejemplos:
 | `z = x + y #` | `i=i+i#` | `I` |
 | `salida z #` | `si#` | `I` |
 | `mientras x < 10 x = x + 1 # fin_mientras` | `mi<ni=i+n#f` | `M` |
+
+La copia `gramatica/GLC_Lab03.jff` contiene el mismo XML que el `.cfg` y también
+puede abrirse con JFLAP. Ambos archivos describen una gramática. Si se regenera
+el `.cfg`, actualizar la copia con `cp gramatica/GLC_Lab03.cfg gramatica/GLC_Lab03.jff`.
 
 ## Verificar con la biblioteca de JFLAP
 
@@ -138,7 +143,8 @@ rsvg-convert -f pdf1.4 figuras/arbol_z_xy.svg -o figuras/arbol_z_xy.pdf
 ## Acceso
 
 Enlace de entrega de la gramática:
-[GLC_Lab03.cfg en GitHub](https://github.com/FernandoValdes01/teoria-computacion/blob/main/laboratorios/lab3/lab03fixon/gramatica/GLC_Lab03.cfg).
+[GLC_Lab03.cfg en GitHub](https://github.com/FernandoValdes01/Lab03-TC/blob/main/gramatica/GLC_Lab03.cfg)
+y [copia GLC_Lab03.jff](https://github.com/FernandoValdes01/Lab03-TC/blob/main/gramatica/GLC_Lab03.jff).
 
 Repositorio de trabajo:
 [Lab03-TC](https://github.com/FernandoValdes01/Lab03-TC).
