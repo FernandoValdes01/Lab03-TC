@@ -12,8 +12,8 @@ de repetición `mientras ... fin_mientras`.
 
 | Ruta | Contenido |
 |---|---|
-| `Fernando_Valdes_Gomez.pdf` | Informe del laboratorio. |
-| `Fernando_Valdes_Gomez.tex` | Fuente del informe. |
+| `Lab03_jefe_Fernando_Valdes.pdf` | Informe del laboratorio. |
+| `Lab03_jefe_Fernando_Valdes.tex` | Fuente del informe. |
 | `gramatica/GLC_Lab03.cfg` | Gramática compatible con JFLAP 7.1. |
 | `gramatica/GLC_Lab03.jff` | Copia idéntica de la gramática con extensión `.jff`, comprobada con JFLAP 7.1. |
 | `gramatica/GLC_Lab03.txt` | Definición formal y codificación de símbolos. |
@@ -129,8 +129,8 @@ java -Djava.awt.headless=true -cp "$LAB03_JFLAP_JAR:build/java" \
 ## Compilar el informe
 
 ```sh
-latexmk -pdf Fernando_Valdes_Gomez.tex
-latexmk -c Fernando_Valdes_Gomez.tex
+latexmk -pdf Lab03_jefe_Fernando_Valdes.tex
+latexmk -c Lab03_jefe_Fernando_Valdes.tex
 ```
 
 `.latexmkrc` selecciona XeLaTeX. El informe usa las fuentes locales de `fonts/`.
